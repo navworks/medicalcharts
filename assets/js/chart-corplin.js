@@ -26,7 +26,6 @@ function bgRevenue() {
         isStacked: true,
         colors: ['#23649e', '#2e7bad', '#65b5c2', '#3993bb', '#63daed'],
         bar: {groupWidth: '30%'},
-        legend: { position: 'none' },
         animation:{
             startup: true,
             duration: 1000,
@@ -64,7 +63,6 @@ function drawVisualization() {
       bar: {groupWidth: 20},
       series: {1: {type: 'line'}},
       colors: ['#23649e', '#ff5400', '#65b5c2', '#3993bb', '#63daed'],
-      legend: { position: 'none' }
     };
     var chart = new google.visualization.ComboChart(document.getElementById('arMonthly'));
     chart.draw(data, options);
@@ -91,7 +89,6 @@ function drawARYearly() {
         bar: {groupWidth: 20},
         series: {1: {type: 'line'}},
         colors: ['#23649e', '#ff5400', '#65b5c2', '#3993bb', '#63daed'],
-        legend: { position: 'none' }
     };
     var chart = new google.visualization.ComboChart(document.getElementById('arYearly'));
     chart.draw(data, options);
@@ -109,7 +106,6 @@ function firstTimeMonthly() {
     ]);
     var options = {
         colors: ['#23649e', '#ff5400', '#65b5c2', '#3993bb', '#63daed'],
-        legend: { position: 'none' },
         vAxis: {minValue: 90},
         pointsVisible: true,
         pointSize: 5,
@@ -130,7 +126,6 @@ function firstTimeYearly() {
     ]);
     var options = {
         colors: ['#23649e', '#ff5400', '#65b5c2', '#3993bb', '#63daed'],
-        legend: { position: 'none' },
         vAxis: {minValue: 90},
         pointsVisible: true,
         pointSize: 5,
@@ -160,7 +155,6 @@ function arAgeing() {
         title: '',
         pieHole: 0.6,
         colors: ['#23649e', '#ff5400', '#65b5c2', '#3993bb', '#63daed'],
-        legend: { position: 'bottom' },
         animation:{
             startup: true,
             duration: 500,
@@ -198,7 +192,6 @@ function denialRate() {
         series: {1: {type: 'line'}},
         colors: ['#23649e', '#ff5400', '#65b5c2', '#3993bb', '#63daed'],
         bar: {groupWidth: '30%'},
-        legend: { position: 'none' },
         animation:{
             startup: true,
             duration: 500,
@@ -240,7 +233,6 @@ function payerMix() {
         isStacked: 'percent',
         colors: ['#23649e', '#2e7bad', '#65b5c2', '#3993bb', '#63daed'],
         bar: {groupWidth: '30%'},
-        legend: { position: 'none' },
         animation:{
             startup: true,
             duration: 1000,
@@ -276,7 +268,6 @@ function newVsFollowupPatientVolume() {
         seriesType: 'bars',
         colors: ['#23649e', '#2e7bad', '#65b5c2', '#3993bb', '#63daed'],
         bar: {groupWidth: '30%'},
-        legend: { position: 'none' },
         animation:{
             startup: true,
             duration: 1000,
@@ -322,7 +313,6 @@ function procedureVolume() {
         seriesType: 'bars',
         colors: ['#23649e', '#2e7bad', '#65b5c2', '#3993bb', '#63daed'],
         bar: {groupWidth: '30%'},
-        legend: { position: 'none' },
         animation:{
             startup: true,
             duration: 1000,
@@ -354,7 +344,6 @@ function chargeCaptureLagTime() {
         bar: {groupWidth: 20},
         series: {1: {type: 'line'}},
         colors: ['#23649e', '#ff5400', '#65b5c2', '#3993bb', '#63daed'],
-        legend: { position: 'none' }
     };
     var chart = new google.visualization.ComboChart(document.getElementById('chargeCaptureLagTime'));
     chart.draw(data, options); 
@@ -380,7 +369,6 @@ function encountertoSuperbillTATResultverificationTAT() {
         bar: {groupWidth: 20},
         series: {1: {type: 'line'}},
         colors: ['#23649e', '#ff5400', '#65b5c2', '#3993bb', '#63daed'],
-        legend: { position: 'none' }
     };
     var chart = new google.visualization.ComboChart(document.getElementById('encountertoSuperbillTATResultverificationTAT'));
     chart.draw(data, options); 
@@ -406,7 +394,6 @@ function codingTAT() {
         bar: {groupWidth: 20},
         series: {1: {type: 'line'}},
         colors: ['#23649e', '#ff5400', '#65b5c2', '#3993bb', '#63daed'],
-        legend: { position: 'none' }
     };
     var chart = new google.visualization.ComboChart(document.getElementById('codingTAT'));
     chart.draw(data, options); 
@@ -432,7 +419,6 @@ function billingTAT() {
         bar: {groupWidth: 20},
         series: {1: {type: 'line'}},
         colors: ['#23649e', '#ff5400', '#65b5c2', '#3993bb', '#63daed'],
-        legend: { position: 'none' }
     };
     var chart = new google.visualization.ComboChart(document.getElementById('billingTAT'));
     chart.draw(data, options); 
