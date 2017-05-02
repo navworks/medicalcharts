@@ -1,12 +1,10 @@
 google.charts.load('current', {'packages':['corechart']});
 
-
 /* 
     ===========================================
             Billed Vs Gross Revenue
     =========================================== 
 */
-
 google.charts.setOnLoadCallback(bgRevenue);
 function bgRevenue() {
     // Some raw data (not necessarily accurate)
@@ -31,11 +29,13 @@ function bgRevenue() {
             duration: 1000,
             easing: 'in'
         },
+        legend: { position: 'bottom' },
         vAxes: {
             0:{
                 gridlines: {
-                    count:7
-                }
+                    count:8
+                },
+                format:'$#,###.00'
             }
         }
     };
@@ -67,7 +67,6 @@ function drawVisualization() {
     var chart = new google.visualization.ComboChart(document.getElementById('arMonthly'));
     chart.draw(data, options);
 }
-
 
 /* 
     ===========================================
@@ -109,6 +108,11 @@ function firstTimeMonthly() {
         vAxis: {minValue: 90},
         pointsVisible: true,
         pointSize: 5,
+        vAxis: {
+            minValue: 90,
+            ticks: [90, 92, 94, 96, 98, 100]
+        }
+
     };
     var chart = new google.visualization.ComboChart(document.getElementById('firstTimeMonthly'));
     chart.draw(data, options);
@@ -129,6 +133,10 @@ function firstTimeYearly() {
         vAxis: {minValue: 90},
         pointsVisible: true,
         pointSize: 5,
+        vAxis: {
+            minValue: 90,
+            ticks: [90, 92, 94, 96, 98, 100],
+        }
     };
     var chart = new google.visualization.ComboChart(document.getElementById('firstTimeYearly'));
     chart.draw(data, options);
@@ -160,6 +168,7 @@ function arAgeing() {
             duration: 500,
             easing: 'out'
         },
+        legend: { position: 'bottom' },
     };
 
     var chart = new google.visualization.PieChart(document.getElementById('arAgeing'));
@@ -178,7 +187,7 @@ function denialRate() {
     // Some raw data (not necessarily accurate)
     var data = google.visualization.arrayToDataTable([
         ['API Category', 
-            'Denial%', { role: 'annotation' }, 
+            'Denial %', { role: 'annotation' }, 
             'Standard'
         ],
         ['Jan 17', 3, '3' , 3 ],
@@ -197,20 +206,15 @@ function denialRate() {
             duration: 500,
             easing: 'in'
         },
-        vAxes: {
-            0:{
-                gridlines: {
-                    count:10
-                }
-            }
+         vAxis: {
+            minValue: 1,
+            ticks: [0,1,2,3,4],
+            format: '#\'%\''
         }
     };
     var chart = new google.visualization.ComboChart(document.getElementById('denialRate'));
     chart.draw(data, options);
 }
-
-
-
 
 /* 
     ===========================================
@@ -418,7 +422,7 @@ function billingTAT() {
         seriesType: 'bars',
         bar: {groupWidth: 20},
         series: {1: {type: 'line'}},
-        colors: ['#23649e', '#ff5400', '#65b5c2', '#3993bb', '#63daed'],
+        colors: ['#23649e', '#ff5400', '#65b5c2', '#3993bb', '#63daed']
     };
     var chart = new google.visualization.ComboChart(document.getElementById('billingTAT'));
     chart.draw(data, options); 
